@@ -1,0 +1,57 @@
+<html>
+    <head>
+        <title>Register/Update User</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    </head>
+    <body style = "background-image: url('https://images.designtrends.com/wp-content/uploads/2015/11/13153143/Beautiful-Grey-Background.jpg'); background-size: cover;">
+        <p style="color: Black; border-width: 25px; border-color: lightgray; background-color: lightgray;position: relative; left: 430px; top:0px; width: 400px;border-style: solid; text-align: center; text-decoration-style: solid; font-family: sans-serif ; font-size: 30px;">
+            {{message}}
+        </p>
+            <form style = "width: 300px; position: relative; left:480px; top:0px" class = 'card p-3 bg-light' method = "post">
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" name = "admin">
+                <label class="form-check-label" for="flexCheckDefault">
+                  Admin?
+                </label>
+              </div>
+              <div class="form-group">
+                <label for="uname">Name</label>
+                <input type="username" class="form-control" id="name" name="name" aria-describedby="NameHelp" placeholder="Enter name">
+                <small id="unHelp" class="form-text text-muted">Leave blank for no change</small>
+              </div>
+              <div class="form-group">
+                <label for="exampleInputPassword1">SSN</label>
+                <input type="username" class="form-control" id="exampleInputPassword2" name = "ssn"placeholder="Leave blank for no change">
+              </div>
+              <div class="form-group">
+                <label for="exampleInputPassword1">Username</label>
+                <input type="username" class="form-control" id="exampleInputPassword3" name = "uname"placeholder="Enter username">
+              </div>
+              <div class="form-group">
+                <label for="exampleInputPassword1">Password</label>
+                <input type="username" class="form-control" id="exampleInputPassword4" name = "password"placeholder="Leave blank for no change">
+              </div>
+              <div class="form-group">
+                <label for="exampleInputPassword1">Confirm Password</label>
+                <input type="username" class="form-control" id="exampleInputPassword10" name = "cpassword"placeholder="Confirm password">
+              </div>
+              <div class="form-group">
+                <label for="exampleInputPassword1">Salary</label>
+                <input type="username" class="form-control" id="exampleInputPassword5" name = "salary"placeholder="Leave blank for no change">
+              </div>
+              <div class="form-group">
+                <label for="exampleInputPassword1">Attendance</label>
+                <input type="username" class="form-control" id="exampleInputPassword6" name = "attendance"placeholder="Leave blank for no change">
+              </div>
+              <div class="form-group">
+                <label for="exampleInputPassword1">Rating</label>
+                <input type="username" class="form-control" id="exampleInputPassword7" name = "rating"placeholder="Leave blank for no change">
+              </div>
+              <div class="form-group">
+                <label for="exampleInputPassword1">Level</label>
+                <input type="username" class="form-control" id="exampleInputPassword8" name = "level"placeholder="Leave blank for no change">
+              </div>
+              <button type="submit" class="btn btn-primary" id>Submit</button>
+            </form>
+    </body>
+</html>

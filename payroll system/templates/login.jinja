@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <title>Login</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    </head>
+    <body style = "background-image: url('https://travel.home.sndimg.com/content/dam/images/travel/stock/2017/10/20/0/GettyImages-556592131_Wangwukong_Bright_City_Shanghai.jpg.rend.hgtvcom.966.644.suffix/1508513115633.jpeg'); background-size: cover;">
+            <form style = "width: 300px; position: relative; left:480px; top:200px" class = 'card p-3 bg-light' method = "post">
+              <div class="form-group">
+                <label for="exampleInputPassword1">Company</label>
+                <input type="username" class="form-control" id="exampleInputPassword2" name = "company"placeholder="Company">
+                <small id="passHelp" class="form-text text-muted">Forgot Password? Too Bad. Re-register.</small>
+              </div>
+              <div class="form-group">
+                <label for="uname">Username</label>
+                <input type="username" class="form-control" id="username" name="username" aria-describedby="UsernameHelp" placeholder="Enter username">
+              </div>
+              <div class="form-group">
+                <label for="exampleInputPassword1">Password</label>
+                <input type="password" class="form-control" id="exampleInputPassword1" name = "password"placeholder="Password">
+                <small id="passHelp" class="form-text text-muted">Forgot Password? Too Bad. Ask your Admin.</small>
+              </div>
+              <button type="submit" class="btn btn-primary" id>Submit</button>
+            </form>
+        <p style="color: Black; border-width: 25px; border-color: lightgray; background-color: lightgray;position: relative; left: 430px; top:-220px; width: 400px;border-style: solid; text-align: center; text-decoration-style: solid; font-family: sans-serif ; font-size: 30px;">
+            {{message}}
+        </p>
+    </body>
+</html>

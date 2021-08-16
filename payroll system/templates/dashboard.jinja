@@ -1,0 +1,34 @@
+<html>
+    <head>
+        <title>Dashboard</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    </head>
+    <body style = "background-image: url('https://ak.picdn.net/shutterstock/videos/13348298/thumb/1.jpg'); background-size: cover;">
+        <h1>Dashboard</h1>
+        <a class="btn btn-primary" href="{{url_for('ruser', cname=emps[0].company.name, status=do, name='r')}}" role="button" style="position: relative; left: 1025px; top: -50px;">Add User</a>
+        <a class="btn btn-primary" href="{{url_for('funds', cname=emps[0].company.name)}}" role="button" style="position: relative; left: 1050px; top: -50px;">Check Funds</a>
+        <a class="btn btn-primary" href="{{url_for('index')}}" role="button" style="position: relative; left: 695px; top: -50px;">Logout</a>
+        <table class="table table-dark">
+          <thead class="thead-dark">
+            <tr>
+              <th scope="col">Name</th>
+              <th scope="col">Salary</th>
+              <th scope="col">Pay</th>
+              <th scope="col">Profile</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for user in emps %}
+                {% if user.uname != "root" %}
+                    <tr>
+                        <td>{{user.name}}</td>
+                        <td>{{user.salary}}</td>
+                        <td><a class="btn btn-primary" href="{{url_for('pay', name=user.uname, cname=user.company.name)}}" role="button">Pay</a></td>
+                        <td><a class="btn btn-primary" href="{{url_for('profile', name=user.uname, cname=user.company.name)}}" role="button">Profile</a></td>
+                    </tr>
+                {% endif %}
+            {% endfor %}
+          </tbody>
+        </table>
+    </body>
+</html>
